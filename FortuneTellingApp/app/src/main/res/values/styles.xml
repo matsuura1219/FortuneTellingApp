@@ -7,4 +7,13 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="mainText">
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/mainTextColor</item>
+    </style>
+
+
+
+
+
 </resources>

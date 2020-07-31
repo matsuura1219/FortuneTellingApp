@@ -1,3 +1,8 @@
 <resources>
+
     <string name="app_name">FortuneTellingApp</string>
+    <string name="mainText">占いの館へようこそ</string>
+    <string name="subText">～あなたの運勢を占います～</string>
+    <string name="copyright">powered by Matsuura</string>
+
 </resources>
