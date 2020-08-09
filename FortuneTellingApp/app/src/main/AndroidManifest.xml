@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".Fragment.AccountFragment"></activity>
+        <activity android:name=".Fragment.CompatibilityFragment"></activity>
+        <activity android:name=".Fragment.DetailFragment" />
+        <activity android:name=".Fragment.ResultFragment" />
+        <activity android:name=".Fragment.MyFortuneFragment" />
+        <activity android:name=".Fragment.AccountFragment" />
         <activity android:name=".Fragment.SNSFragment" />
         <activity android:name=".Fragment.SearchFragment" />
         <activity android:name=".Fragment.HomeFragment" />

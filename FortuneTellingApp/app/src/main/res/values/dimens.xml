@@ -4,5 +4,10 @@
     <dimen name="bigTextSize">28dp</dimen>
     <dimen name="middiumTextSize">22sp</dimen>
     <dimen name="smallTextSize">16sp</dimen>
+    <dimen name="soulNumberSize">50sp</dimen>
+
+    <dimen name="fragmentTitle">18sp</dimen>
+
+    <dimen name="padding">10dp</dimen>
 
 </resources>

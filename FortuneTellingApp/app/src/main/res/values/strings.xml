@@ -5,6 +5,36 @@
     <string name="subText">～あなたの運勢を占います～</string>
     <string name="copyright">powered by Matsuura</string>
     <string name="toolbar">占いの館</string>
+    <string name="homeTitle">占い方法を選択してください</string>
+    <string name="myFortune">自分の運勢占い</string>
+    <string name="compatibility">相性占い</string>
+    <string name="writeBirthday">生年月日を入力してください</string>
+    <string name="resultButton">診断します</string>
+    <string name="numberFormatException">数字以外を入力しないでください</string>
+    <string name="noNumberException">数字以外を入力しないでください</string>
+    <string name="inputException">8桁の数字を入力してください</string>
+    <string name="resultTitle">あなたのソウルナンバーは・・・</string>
+    <string name="detailLink">もっと知りたい方はこちらへ</string>
+
+    <string name="character1">才能も運もあるが、ハートが弱く小心者</string>
+    <string name="character2">頭がよく直感が働くが、短気で人からあれこれいわれたくない</string>
+    <string name="character3">面倒見がよく芸術センスがあるが、ストレスを溜めやすい</string>
+    <string name="character4">働き者でリーダーシップがあるが、クールで人間味がない</string>
+    <string name="character5">マイペースで安定志向だが、恋愛下手</string>
+    <string name="character6">八方美人で愛情深いが、恋愛下手</string>
+    <string name="character7">お調子者でパワフルだが、デリケートで傷つきやすい</string>
+    <string name="character8">こだわりが強く金運もあるが、ものの考え方が極端</string>
+    <string name="character9">記憶力がよく天才肌だが、寂しがり屋で１番浮気しやすい</string>
+
+    <string name="detailcharacter1">・人を元気づける才能がある\n・頭の回転が速い\n・運が強いので、いざとなったら助けられる\n・調子がいいところがある\n・わがままになりやすい</string>
+    <string name="detailcharacter2">・マイペースで人にああしろ、こうしろと言われることが嫌い\n・頭が良くて、せっかち\n・水の近くにいると精神的に安心する\n・金運がない\n・利益があるモノとないモノを判断するのが速い</string>
+    <string name="detailcharacter3">・圧倒的にお母さんの影響を受けている\n・優しくて面倒見がよい\n・人を傷つけるのも傷つけられるのも嫌い\n・一番になりたくない。2番手が好き\n・アート的なセンスがある人が多い</string>
+    <string name="detailcharacter4">・働き者。失敗しても立ち直りが早い\n・意志が強い、男っぽい\n・男性に対しては理想が高い\n・仕事がうまくいかないと暴力的になる可能性がある\n・自分より仕事ができない人を見下す</string>
+    <string name="detailcharacter5">・家族の絆を大切にする\n・安定することを好む\n・マイペースでのんびりしている</string>
+    <string name="detailcharacter6">・落ち着きがない。安定を嫌う\n・飽きっぽい。新しいことに興味がある\n・見かけよりも気を遣ったり神経質なところもある\n・あれこれ何でもしゃべりたがる\n・人間関係で自分の運勢が伸びていく</string>
+    <string name="detailcharacter7">・家庭的で家族を大切にする\n・車に関してマニアックな人が多い\n・不思議なインスピレーションがある\n・見かけよりもデリケートで傷つきやすい\n・地に足つけてね。夢だけは追わないように</string>
+    <string name="detailcharacter8">・自然体が好き。自然が好き。（町の中はゴミゴミしていて嫌い）\n・物の考え方が極端\n・経済観念がありそうで、ない\n・純粋だが、ちょっと変わり者\n・怠け始めたら怠け癖がつく\n・信頼されるとスゴクつくすが、無視されると極端に豹変する</string>
+    <string name="detailcharacter9">・寂しがり屋のくせに、一人でいることが好き\n・複雑な性格なところがある\n・人に背を向ける割に自分が中心にならないとすねる\n・たくさんの友人より数少ない友人に恵まれるので困った時に助けられる\n・論理的で頭がいい。記憶力が優れている</string>
 
 
 </resources>

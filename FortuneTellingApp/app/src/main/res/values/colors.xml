@@ -6,4 +6,6 @@
     <color name="mainBackgroundColor">#835fa8</color>
     <color name="mainTextColor">#fff799</color>
     <color name="nonCheckedColor">#767676</color>
+    <color name="errorTextColor">#990000</color>
+    <color name="buttonStroke">#000000</color>
 </resources>
