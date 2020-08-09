@@ -5,4 +5,5 @@
     <color name="colorAccent">#03DAC5</color>
     <color name="mainBackgroundColor">#835fa8</color>
     <color name="mainTextColor">#fff799</color>
+    <color name="nonCheckedColor">#767676</color>
 </resources>

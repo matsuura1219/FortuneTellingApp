@@ -4,5 +4,7 @@
     <string name="mainText">占いの館へようこそ</string>
     <string name="subText">～あなたの運勢を占います～</string>
     <string name="copyright">powered by Matsuura</string>
+    <string name="toolbar">占いの館</string>
+
 
 </resources>

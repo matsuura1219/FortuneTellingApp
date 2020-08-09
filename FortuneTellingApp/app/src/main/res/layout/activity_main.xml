@@ -8,31 +8,44 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:layout_width="match_parent"
+        android:id="@+id/mainTitle"
+        style="@style/mainText"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/mainText"
-        style="@style/mainText"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="138dp" />
+        android:textSize="@dimen/bigTextSize"
+        app:layout_constraintBottom_toTopOf="@+id/subTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
 
     <TextView
+        android:id="@+id/subTitle"
         style="@style/mainText"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="260dp"
         android:text="@string/subText"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="275dp" />
+        android:textSize="@dimen/middiumTextSize"
+        app:layout_constraintBottom_toTopOf="@+id/reference"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
 
     <TextView
+        android:id="@+id/reference"
         style="@style/mainText"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="88dp"
         android:text="@string/copyright"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="607dp" />
+        android:textSize="@dimen/smallTextSize"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
