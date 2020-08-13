@@ -6,28 +6,30 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
-import android.util.Log;
-import android.util.Printer;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import com.example.fortunetellingapp.R;
 
-public class ResultFragment extends Fragment implements View.OnClickListener {
+public class CompatibilityResultFragment extends Fragment implements View.OnClickListener {
 
-    /** 変数の定義 */
 
     private View rootView;
-    private TextView resultTitle;
-    private TextView soulNumber;
-    private TextView detail;
-    private String birthday;
-    private Button backButton;
+    private String myBirthday = null;
+    private String otherBirthday = null;
 
-    private int soul = 0;
+    private TextView mySoul;
+    private TextView otherSoul;
+    private TextView compatibilityDetail;
+
+    private int mySoulNumber = 0;
+    private int otherSoulNumber = 0;
+
+    private Button backButton;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -35,73 +37,48 @@ public class ResultFragment extends Fragment implements View.OnClickListener {
 
         //遷移前の画面で入力した生年月日を受け取る
         Bundle bundle = getArguments();
-        birthday = bundle.getString("birthday");
-
+        myBirthday = bundle.getString("myBirthday");
+        otherBirthday = bundle.getString("otherBirthday");
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        rootView = inflater.inflate(R.layout.activity_result_fragment, container, false);
-        resultTitle = (TextView) rootView.findViewById(R.id.resultTitle);
-        soulNumber = (TextView) rootView.findViewById(R.id.soulNumber);
-        detail = (TextView) rootView.findViewById(R.id.detail);
+        super.onCreateView(inflater, container, savedInstanceState);
+
+        rootView = inflater.inflate(R.layout.activity_compatibility_result_fragment, container, false);
+        mySoul = (TextView) rootView.findViewById(R.id.mySoulNumber);
+        otherSoul = (TextView) rootView.findViewById(R.id.otherSoulNumber);
+        compatibilityDetail = (TextView) rootView.findViewById(R.id.compatibilityDetail);
         backButton = (Button) rootView.findViewById(R.id.backButton);
-
         return rootView;
-
     }
-
 
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState){
 
-        detail.setOnClickListener(this);
+        compatibilityDetail.setOnClickListener(this);
         backButton.setOnClickListener(this);
-        soul = calcFortune(birthday);
-        soulNumber.setText(String.valueOf(soul));
 
+        mySoulNumber = calcFortune(myBirthday);
+        otherSoulNumber = calcFortune(otherBirthday);
+
+        mySoul.setText(String.valueOf(mySoulNumber));
+        otherSoul.setText(String.valueOf(otherSoulNumber));
     }
-
-
-    /** ソウルナンバーを計算するメソッド */
-
-    private int calcFortune(String date){
-
-      String sum = date;
-
-      do{
-          int addBirth = 0;
-
-          String[] split = sum.split("");
-
-          for(int i=1; i<split.length; i++){
-
-              addBirth += Integer.parseInt(split[i]);
-          }
-
-          sum = String.valueOf(addBirth);
-
-      }while(sum.length() != 1);
-
-
-      return Integer.parseInt(sum);
-
-    }
-
 
     @Override
     public void onClick(View view) {
 
-        if(view.getId() == R.id.detail) {
+        if(view.getId() == R.id.compatibilityDetail) {
             // データを渡す為のBundleを生成し、渡すデータを内包させる
             Bundle bundle = new Bundle();
-            bundle.putString("soulNumber", String.valueOf(soul));
+            bundle.putString("mySoulNumber", String.valueOf(mySoulNumber));
+            bundle.putString("otherSoulNumber", String.valueOf(otherSoulNumber));
 
             // Fragmentを生成し、setArgumentsで先ほどのbundleをセットする
-            Fragment fragment = new DetailFragment();
+            Fragment fragment = new CompatibilityDetailFragment();
             fragment.setArguments(bundle);
 
             // FragmentをFragmentManagerにセットする
@@ -109,10 +86,11 @@ public class ResultFragment extends Fragment implements View.OnClickListener {
             FragmentTransaction transaction = manager.beginTransaction();
             transaction.replace(R.id.content, fragment);
             transaction.commit();
+
         }else if(view.getId() == R.id.backButton){
 
             // Fragmentを生成し、setArgumentsで先ほどのbundleをセットする
-            Fragment fragment = new MyFortuneFragment();
+            Fragment fragment = new CompatibilityFragment();
 
             // FragmentをFragmentManagerにセットする
             FragmentManager manager = getFragmentManager();
@@ -121,5 +99,30 @@ public class ResultFragment extends Fragment implements View.OnClickListener {
             transaction.commit();
 
         }
+    }
+
+    /** ソウルナンバーを計算するメソッド */
+
+    private int calcFortune(String date){
+
+        String sum = date;
+
+        do{
+            int addBirth = 0;
+
+            String[] split = sum.split("");
+
+            for(int i=1; i<split.length; i++){
+
+                addBirth += Integer.parseInt(split[i]);
+            }
+
+            sum = String.valueOf(addBirth);
+
+        }while(sum.length() != 1);
+
+
+        return Integer.parseInt(sum);
+
     }
 }

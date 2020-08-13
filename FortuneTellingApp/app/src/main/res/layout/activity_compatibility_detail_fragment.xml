@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mainBackgroundColor"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/padding"
+    android:paddingRight="@dimen/padding"
+    tools:context=".Fragment.CompatibilityDetailFragment">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/myDetailTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:gravity="center"
+                android:text="@string/resultTitle"
+                android:textAlignment="center"
+                android:textSize="@dimen/fragmentTitle"
+                android:theme="@style/mainText" />
+
+            <TextView
+                android:id="@+id/myCharacter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:gravity="left"
+                android:text="ああああああ"
+                android:textSize="@dimen/middiumTextSize"
+                android:theme="@style/errorText" />
+
+            <TextView
+                android:id="@+id/myDetailCharacter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:gravity="left"
+                android:text="@string/detailLink"
+                android:textSize="@dimen/smallTextSize"
+                android:theme="@style/mainText" />
+
+
+
+            <TextView
+                android:id="@+id/otherDetailTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="70dp"
+                android:gravity="center"
+                android:text="@string/otherresultTitle"
+                android:textAlignment="center"
+                android:textSize="@dimen/fragmentTitle"
+                android:theme="@style/mainText" />
+
+            <TextView
+                android:id="@+id/otherCharacter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:gravity="left"
+                android:text="ああああああ"
+                android:textSize="@dimen/middiumTextSize"
+                android:theme="@style/errorText" />
+
+            <TextView
+                android:id="@+id/otherDetailCharacter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:gravity="left"
+                android:text="@string/detailLink"
+                android:textSize="@dimen/smallTextSize"
+                android:theme="@style/mainText" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

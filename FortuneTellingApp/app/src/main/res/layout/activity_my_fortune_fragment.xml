@@ -3,78 +3,185 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:id="@+id/main_constraint"
     android:layout_height="match_parent"
     android:background="@color/mainBackgroundColor"
     tools:context=".Fragment.MyFortuneFragment">
-
 
     <TextView
         android:id="@+id/myFortuneTitle"
         style="@style/mainText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="50dp"
         android:text="@string/writeBirthday"
-        android:textSize="@dimen/smallTextSize"
+        android:textSize="@dimen/fragmentTitle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
 
-    <TextView
-        android:id="@+id/birthText"
-        style="@style/mainText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        android:layout_marginTop="56dp"
-        android:text="生年月日："
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/myFortuneTitle"
-        tools:ignore="MissingConstraints" />
-
-    <EditText
-        android:id="@+id/birthEdit"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-
-        android:layout_marginTop="40dp"
-        android:maxLength="8"
-        android:maxLines="1"
-        android:textColor="@color/mainTextColor"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/birthText"
-        tools:ignore="MissingConstraints" />
-
-    <TextView
-        android:id="@+id/errorText"
-        style="@style/errorText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        android:text="間違いです"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/birthEdit"
-        tools:ignore="MissingConstraints" />
-
-    <Button
-        android:id="@+id/resultButton"
-        android:layout_width="200dp"
-        android:layout_height="60dp"
-        android:layout_marginBottom="100dp"
-        android:text="@string/resultButton"
-        android:background="@drawable/shape_rounded_corners_10dp"
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.499"
         app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintTop_toBottomOf="@+id/myFortuneTitle">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/birthText"
+            style="@style/mainText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="自分の生年月日：" />
+
+        <EditText
+            android:id="@+id/birthEdit"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="32dp"
+            android:maxLength="8"
+            android:maxLines="1"
+            android:textColor="@color/mainTextColor" />
+
+            <TextView
+                android:id="@+id/errorText"
+                style="@style/errorText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="32dp"
+                android:text="間違いです" />
+
+
+            <TextView
+                android:id="@+id/exampleText"
+                style="@style/mainText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="32dp"
+                android:text="例）1995年12月19日 → 19951219" />
+
+            <Button
+                android:id="@+id/resultButton"
+                android:layout_width="200dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/shape_rounded_corners_10dp"
+                android:text="@string/resultButton"
+                android:textColor="@color/mainTextColor"
+                android:textSize="@dimen/smallTextSize" />
+
+            <Button
+                android:id="@+id/backButton"
+                android:layout_width="200dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/shape_rounded_corners_10dp"
+                android:text="@string/backButton"
+                android:textColor="@color/mainTextColor"
+                android:textSize="@dimen/smallTextSize" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+<!--    <TextView-->
+<!--        android:id="@+id/birthText"-->
+<!--        style="@style/mainText"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="50dp"-->
+<!--        android:text="生年月日："-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/myFortuneTitle"-->
+<!--        tools:ignore="MissingConstraints" />-->
+
+<!--    <EditText-->
+<!--        android:id="@+id/birthEdit"-->
+<!--        android:layout_width="300dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="32dp"-->
+<!--        android:maxLength="8"-->
+<!--        android:maxLines="1"-->
+<!--        android:textColor="@color/mainTextColor"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.5"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/birthText"-->
+<!--        tools:ignore="MissingConstraints" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/exampleText"-->
+<!--        style="@style/mainText"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="32dp"-->
+<!--        android:text="例）1995年12月19日 → 19951219"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/birthEdit"-->
+<!--        tools:ignore="MissingConstraints" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/errorText"-->
+<!--        style="@style/errorText"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="32dp"-->
+<!--        android:text="間違いです"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/exampleText"-->
+<!--        tools:ignore="MissingConstraints" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/resultButton"-->
+<!--        android:layout_width="200dp"-->
+<!--        android:layout_height="60dp"-->
+<!--        android:layout_marginBottom="20dp"-->
+<!--        android:background="@drawable/shape_rounded_corners_10dp"-->
+<!--        android:text="@string/resultButton"-->
+<!--        android:textColor="@color/mainTextColor"-->
+<!--        android:textSize="@dimen/smallTextSize"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/backButton"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.498"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        tools:ignore="MissingConstraints" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/backButton"-->
+<!--        android:layout_width="200dp"-->
+<!--        android:layout_height="60dp"-->
+<!--        android:layout_marginBottom="30dp"-->
+<!--        android:background="@drawable/shape_rounded_corners_10dp"-->
+<!--        android:text="@string/backButton"-->
+<!--        android:textColor="@color/mainTextColor"-->
+<!--        android:textSize="@dimen/smallTextSize"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.498"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        tools:ignore="MissingConstraints" />-->
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,10 +7,15 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebView;
 
 import com.example.fortunetellingapp.R;
 
+
 public class SearchFragment extends Fragment {
+
+    private View rootView;
+    private WebView webView;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -22,6 +27,9 @@ public class SearchFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        return inflater.inflate(R.layout.activity_search_fragment, container, false);
+        rootView = inflater.inflate(R.layout.activity_search_fragment, container, false);
+        webView = (WebView) rootView.findViewById(R.id.webView);
+        webView.loadUrl("https://www.google.co.jp/");
+        return rootView;
     }
 }

@@ -12,7 +12,7 @@
                 android:color="@color/mainBackgroundColor"/>
 
             <stroke
-                android:width="10dp"
+                android:width="5dp"
                 android:color="@color/buttonStroke" />
         </shape>
     </item>

@@ -39,7 +39,7 @@
             android:text="ああああああ"
             android:textSize="@dimen/middiumTextSize"
             android:theme="@style/errorText"
-            android:gravity="left"/>
+            android:gravity="center"/>
 
         <TextView
             android:id="@+id/detailCharacter"

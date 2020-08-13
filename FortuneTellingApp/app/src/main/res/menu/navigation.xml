@@ -5,24 +5,23 @@
     <!--title→アイコンの下に表示する文字-->
     <item
         android:id="@+id/navigation_home"
-        android:icon="@drawable/images"
-        android:title="home" />
+        android:icon="@drawable/ic_baseline_brightness_3_24"
+        android:title="占い" />
 
     <item
         android:id="@+id/navigation_search"
-        android:icon="@drawable/images"
-
-        android:title="search" />
+        android:icon="@drawable/ic_baseline_search_24"
+        android:title="検索" />
 
     <item
         android:id="@+id/navigation_sns"
-        android:icon="@drawable/images"
+        android:icon="@drawable/ic_baseline_language_24"
         android:title="SNS" />
 
     <item
         android:id="@+id/navigation_account"
-        android:icon="@drawable/images"
-        android:title="Account" />
+        android:icon="@drawable/ic_baseline_account_box_24"
+        android:title="マイページ" />
 
 
 </menu>

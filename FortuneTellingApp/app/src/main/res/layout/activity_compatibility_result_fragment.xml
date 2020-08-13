@@ -5,24 +5,24 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/mainBackgroundColor"
-    tools:context=".Fragment.ResultFragment">
+    tools:context=".Fragment.CompatibilityResultFragment">
 
     <TextView
-        android:id="@+id/resultTitle"
-        android:theme="@style/mainText"
+        android:id="@+id/myResultTitle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.499"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         android:text="@string/resultTitle"
         android:textSize="@dimen/fragmentTitle"
+        android:theme="@style/mainText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints" />
 
     <TextView
-        android:id="@+id/soulNumber"
+        android:id="@+id/mySoulNumber"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
@@ -32,11 +32,40 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/resultTitle"
+        app:layout_constraintTop_toBottomOf="@+id/myResultTitle"
         tools:ignore="MissingConstraints" />
 
     <TextView
-        android:id="@+id/detail"
+        android:id="@+id/otherResultTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="@string/otherresultTitle"
+        android:textSize="@dimen/fragmentTitle"
+        android:theme="@style/mainText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mySoulNumber"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/otherSoulNumber"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="ああああああ"
+
+        android:textSize="@dimen/bigTextSize"
+        android:theme="@style/errorText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/otherResultTitle"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/compatibilityDetail"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
@@ -44,9 +73,9 @@
         android:textSize="@dimen/smallTextSize"
         android:theme="@style/mainText"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/soulNumber"
+        app:layout_constraintTop_toBottomOf="@+id/otherSoulNumber"
         tools:ignore="MissingConstraints" />
 
     <Button
@@ -62,7 +91,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/detail" />
-
+        app:layout_constraintTop_toBottomOf="@+id/compatibilityDetail"
+        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

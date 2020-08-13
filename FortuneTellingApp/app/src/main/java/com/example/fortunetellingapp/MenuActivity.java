@@ -8,15 +8,21 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Context;
+import android.content.Intent;
+import android.graphics.Bitmap;
 import android.os.Bundle;
+import android.provider.MediaStore;
+import android.view.KeyEvent;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.FrameLayout;
 
 import com.example.fortunetellingapp.Fragment.AccountFragment;
 import com.example.fortunetellingapp.Fragment.HomeFragment;
 import com.example.fortunetellingapp.Fragment.SNSFragment;
 import com.example.fortunetellingapp.Fragment.SearchFragment;
+import com.example.fortunetellingapp.MyInterface.CameraInterface;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MenuActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
@@ -29,7 +35,7 @@ public class MenuActivity extends AppCompatActivity implements BottomNavigationV
     //キーボードの制御をする変数
     private InputMethodManager inputMethodManager;
     private ConstraintLayout mainLayout;
-
+    private FrameLayout content;
 
 
     @Override
@@ -57,7 +63,11 @@ public class MenuActivity extends AppCompatActivity implements BottomNavigationV
 
         navigation = (BottomNavigationView) findViewById(R.id.bottomNavigationView);
         mainLayout = (ConstraintLayout) findViewById(R.id.mainLayout);
+        content = (FrameLayout) findViewById(R.id.content);
+
     }
+
+    /** FrameLayoutに最初に占いフラグメントを表示させる初期化処理 */
 
     private void init(){
 
@@ -75,7 +85,7 @@ public class MenuActivity extends AppCompatActivity implements BottomNavigationV
     }
 
 
-    /** コールバックメソッド */
+    /** ナビゲーションタブを押下したときに呼ばれるコールバックメソッド */
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -96,10 +106,13 @@ public class MenuActivity extends AppCompatActivity implements BottomNavigationV
         }
 
         final FragmentTransaction transaction = fragmentManager.beginTransaction();
+        //FrameLayoutにfragmentを表示させる
         transaction.replace(R.id.content, fragment).commit();
         //return文により、ここで処理終了
         return true;
     }
+
+    /** 画面を押下したときに呼ばれるコールバックメソッド */
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
@@ -109,8 +122,32 @@ public class MenuActivity extends AppCompatActivity implements BottomNavigationV
         //背景にフォーカスを移す
         mainLayout.requestFocus();
 
+        //キーボードを隠す
+        inputMethodManager.hideSoftInputFromWindow(content.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
+        //背景にフォーカスを移す
+        content.requestFocus();
+
         return false;
     }
+
+
+    /** Backキーを無効 */
+
+    //キーイベントをハンドリングするメソッド
+    @Override
+    public boolean dispatchKeyEvent(KeyEvent event) {
+        if (event.getAction()==KeyEvent.ACTION_DOWN) {
+            switch (event.getKeyCode()) {
+                //バックキーが押されたとき
+                case KeyEvent.KEYCODE_BACK:
+                    // ダイアログ表示など特定の処理を行いたい場合はここに記述
+                    // 親クラスのdispatchKeyEvent()を呼び出さずにtrueを返す
+                    return true;
+            }
+        }
+        return super.dispatchKeyEvent(event);
+    }
+
 
 
 }

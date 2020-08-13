@@ -1,6 +1,5 @@
 package com.example.fortunetellingapp.Fragment;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
@@ -17,6 +16,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
 
     private Button myFortuneButton;
     private Button compatibilityButton;
+    private Button omikujiButton;
     private View rootView;
 
 
@@ -34,6 +34,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         rootView = inflater.inflate(R.layout.activity_home_fragment, container, false);
         myFortuneButton = (Button) rootView.findViewById(R.id.myFortune);
         compatibilityButton = (Button) rootView.findViewById(R.id.compatibility);
+        omikujiButton = (Button) rootView.findViewById(R.id.omikuji);
 
         return rootView;
     }
@@ -43,6 +44,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
 
         myFortuneButton.setOnClickListener(this);
         compatibilityButton.setOnClickListener(this);
+        omikujiButton.setOnClickListener(this);
     }
 
 
@@ -61,8 +63,11 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
             FragmentTransaction transaction = manager.beginTransaction();
             transaction.replace(R.id.content, new CompatibilityFragment());
             transaction.commit();
-        }else{
-
+        }else if(view.getId() == R.id.omikuji){
+            FragmentManager manager = getFragmentManager();
+            FragmentTransaction transaction = manager.beginTransaction();
+            transaction.replace(R.id.content, new OmikujiFragment());
+            transaction.commit();
         }
     }
 }

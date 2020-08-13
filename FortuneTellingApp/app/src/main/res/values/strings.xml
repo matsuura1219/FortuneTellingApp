@@ -8,23 +8,35 @@
     <string name="homeTitle">占い方法を選択してください</string>
     <string name="myFortune">自分の運勢占い</string>
     <string name="compatibility">相性占い</string>
+    <string name="omikuji">おみくじ</string>
+    <string name="tarot">タロット</string>
+    <string name="secret1">To be Continued</string>
+    <string name="secret2">To be Continued</string>
+    <string name="secret3">To be Continued</string>
+    <string name="omikujiTitle">タップしてください</string>
+    <string name="duringOmikuji">なにがでるかな？</string>
     <string name="writeBirthday">生年月日を入力してください</string>
     <string name="resultButton">診断します</string>
+    <string name="backButton">戻る</string>
     <string name="numberFormatException">数字以外を入力しないでください</string>
+    <string name="inputNumberError">入力数が違います</string>
     <string name="noNumberException">数字以外を入力しないでください</string>
+    <string name="noInputException">生年月日を入力してください</string>
     <string name="inputException">8桁の数字を入力してください</string>
     <string name="resultTitle">あなたのソウルナンバーは・・・</string>
-    <string name="detailLink">もっと知りたい方はこちらへ</string>
+    <string name="otherresultTitle">相手のソウルナンバーは・・・</string>
+    <string name="detailLink"><u>もっと知りたい方はこちらへ</u></string>
 
-    <string name="character1">才能も運もあるが、ハートが弱く小心者</string>
-    <string name="character2">頭がよく直感が働くが、短気で人からあれこれいわれたくない</string>
-    <string name="character3">面倒見がよく芸術センスがあるが、ストレスを溜めやすい</string>
-    <string name="character4">働き者でリーダーシップがあるが、クールで人間味がない</string>
-    <string name="character5">マイペースで安定志向だが、恋愛下手</string>
-    <string name="character6">八方美人で愛情深いが、恋愛下手</string>
-    <string name="character7">お調子者でパワフルだが、デリケートで傷つきやすい</string>
-    <string name="character8">こだわりが強く金運もあるが、ものの考え方が極端</string>
-    <string name="character9">記憶力がよく天才肌だが、寂しがり屋で１番浮気しやすい</string>
+
+    <string name="character1">才能も運もあるが、\nハートが弱く小心者</string>
+    <string name="character2">頭がよく直感が働くが、\n短気で人からあれこれいわれたくない</string>
+    <string name="character3">面倒見がよく芸術センスがあるが、\nストレスを溜めやすい</string>
+    <string name="character4">働き者でリーダーシップがあるが、\nクールで人間味がない</string>
+    <string name="character5">マイペースで安定志向だが、\n恋愛下手</string>
+    <string name="character6">八方美人で愛情深いが、\n恋愛下手</string>
+    <string name="character7">お調子者でパワフルだが、\nデリケートで傷つきやすい</string>
+    <string name="character8">こだわりが強く金運もあるが、\nものの考え方が極端</string>
+    <string name="character9">記憶力がよく天才肌だが、\n寂しがり屋で１番浮気しやすい</string>
 
     <string name="detailcharacter1">・人を元気づける才能がある\n・頭の回転が速い\n・運が強いので、いざとなったら助けられる\n・調子がいいところがある\n・わがままになりやすい</string>
     <string name="detailcharacter2">・マイペースで人にああしろ、こうしろと言われることが嫌い\n・頭が良くて、せっかち\n・水の近くにいると精神的に安心する\n・金運がない\n・利益があるモノとないモノを判断するのが速い</string>
